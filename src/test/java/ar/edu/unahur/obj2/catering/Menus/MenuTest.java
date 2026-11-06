@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.catering.Servicios.Menus;
+package ar.edu.unahur.obj2.catering.Menus;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 import ar.edu.unahur.obj2.catering.Excepciones.DescuentoInvalidoException;
-import ar.edu.unahur.obj2.catering.Menus.Menu;
 import ar.edu.unahur.obj2.catering.Servicios.Servicio;
 
 public class MenuTest {
@@ -70,7 +69,14 @@ public class MenuTest {
         assertEquals(true, menuParrillero.propuestaIncluye("Parrillada completa"));
     }
 
+
 }
+
+/*
+1. Calcular el precio, la cantidad de servicios y la inclusión por nombre de *Evento Completo* con las **mismas operaciones** de la parte anterior.
+2. Quien consulta una propuesta **no debe saber** si tiene delante un servicio suelto o un menú.
+
+*/
 
 /*
 | Consulta | Resultado |

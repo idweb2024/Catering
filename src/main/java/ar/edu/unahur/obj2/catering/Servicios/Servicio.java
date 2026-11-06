@@ -30,4 +30,8 @@ public class Servicio implements Propuesta {
     public Boolean propuestaIncluye(String nombre) {
         return nombre.equals(this.nombre);
     }
+
+    public void setTarifa(Double tarifa) {
+        this.precio = tarifa;
+    }
 }
