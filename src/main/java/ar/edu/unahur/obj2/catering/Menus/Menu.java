@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unahur.obj2.catering.Excepciones.DescuentoInvalidoException;
+import ar.edu.unahur.obj2.catering.Excepciones.PropuestaNoIncluidaException;
 import ar.edu.unahur.obj2.catering.Propuestas.Propuesta;
 
 
@@ -53,6 +54,13 @@ public class Menu implements Propuesta {
 
     public void agregarPropuesta(Propuesta propuesta) {
         propuestas.add(propuesta);
+    }
+
+    public void quitarPropuesta(Propuesta propuesta) {
+        if (!this.propuestas.contains(propuesta)) {
+            throw new PropuestaNoIncluidaException("La propuesta no se encuentra en el menu");
+        }
+        this.propuestas.remove(propuesta);
     }
 
 }
